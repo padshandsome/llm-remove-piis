@@ -2,3 +2,4 @@ Path
 langchain
 pymupdf
 streamlit
+openai
