@@ -1,7 +1,7 @@
 import base64
 from pathlib import Path
 from model import deidentifier
-from utils import render_file
+from utils import render_file, download_pdf_btn
 
 import streamlit as st
 
@@ -61,7 +61,10 @@ redact_word_string = st.text_area('Redact word list detected by GPT 3.5, you can
 
 render_btn = st.button("Visualize the files:")
 
+
 if render_btn:
+
+    download_pdf_btn()
     # if there are changes to the redact words
     if redact_word_string != ', '.join(assistant.redact_words[int(page_index)]):
         assistant.redact_words[int(page_index)] = redact_word_string.split(', ')
@@ -69,7 +72,10 @@ if render_btn:
 
         # update session state
         st.session_state['assistant'] = assistant
-
+    
+    # print(type(page_index), page_index)
     # render two pdfs
-    render_file(bytes_data)
+    render_file(page_index)
+
+
    
