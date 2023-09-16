@@ -3,7 +3,7 @@ a streamlit app, utilize openai API and langchain to remove personal, sensitive 
 
 This project comes from a real user case. In a world data becomes more and more important, it's our responsibility to provide a 100% secure and trusted llm application. Normally the data masking and de-identification process involves a huge amount of human labor work, but our app provides a possibility to utilize the power of llms to automate the de-identification process.
 
-![Project Structure](.\image\project.png)
+![Project Structure](./image/project.png)
 
  - Steramlit Cloud Demo: https://llm-remove-piis-demo.streamlit.app/
  - Source Code: https://github.com/padshandsome/llm-remove-piis
