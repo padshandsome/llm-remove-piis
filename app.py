@@ -13,6 +13,19 @@ st.title("Remove personal information from your documents with GPT 3.5.")
 OPENAI_API_KEY = None
 with st.sidebar:
     OPENAI_API_KEY = st.text_input("OpenAI API Key", key = "openai_api_key", type="password")
+    "## Background : "
+    "This project comes from a real user case. In a world data becomes more and more important, it's our responsibility to provide a 100% secure and trusted llm application. Normally the data masking and de-identification process involves a huge amount of human labor work, but our app provides a possibility to utilize the power of llms to automate the de-identification process. "
+    "## Instructions:"
+    " - Enter your personal OpenAI key."
+    " - Upload the pdf file you want to de-identify."
+    " - Modify the redact word list returned from OpenAI."
+    " - Visualize and export the masked pdf file."
+    "## Contact : "
+    "Mengmeng Liu"
+    "[Linkedin](https://www.linkedin.com/in/mengmeng-liu-8a84681a2/)"
+    "mengmengliu24@gmail.com"
+    "[View the source code](https://github.com/padshandsome/llm-remove-piis)"
+    "[Medium](https://medium.com/@mengmengliu24)"
 
 if not OPENAI_API_KEY:
         st.info("Please add your OpenAI API key to continue.")
